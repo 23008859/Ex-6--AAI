@@ -1,5 +1,5 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>ENTER YOUR NAME: Dhivyapriya. R</H3>
+<H3>ENTER YOUR REGISTER NO.: 212222230032</H3>
 <H3>EX. NO.6</H3>
 <H3>DATE:</H3>
 <H1 ALIGN =CENTER>Implementation of Semantic ANalysis</H1>
@@ -17,12 +17,43 @@ Step 5:Iterate through each word in the tokenized text.<br>
 •	Extract synonyms and antonyms using lemma.name() and lemma.antonyms()[0].name() respectively.<br>
 •	Print the unique sets of synonyms and antonyms.
 <H3>Program:</H3>
-
-Insert your code here
-
+Importing NLTK and Resource Downloads
+```
+import nltk
+nltk.download( 'punkt' )
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+from nltk.tokenize import word_tokenize
+nltk.download( 'averaged_perceptron_tagger' )
+from nltk.corpus import wordnet
+```
+Tokenization and Part-of-Speech Tagging
+```
+sentence=input()
+words = word_tokenize(sentence)
+pos_tags= nltk.pos_tag(words)
+for word, tag in pos_tags:
+    print(f"{word:<6} - {tag}")
+```
+Extracting Synonyms and Antonyms from Words
+```
+     synonyms =[]
+antonyms =[]
+for word in words:
+    for syn in wordnet.synsets(word):
+        for lemma in syn.lemmas():
+            synonyms.append (lemma.name())
+            if lemma.antonyms():
+                antonyms.append (lemma.antonyms()[0].name())
+print ( "Synonyms : " ,set(synonyms))
+print ( "Antonyms : " ,set(antonyms))
+```
 <H3>Output</H3>
+Parts of Speech:
+![380434867-1d6792e5-2b04-4cff-a1f5-d4ab1ed18034](https://github.com/user-attachments/assets/1d4685b2-bd7e-4b07-91f1-f09a65b23814)
 
-Show your results here
+Synonyms and Antonyms:
+![380434878-7e1b48d8-6b27-429b-9b21-caa9bd6066df](https://github.com/user-attachments/assets/3ca1e062-c924-4961-9904-521b73b23452)
 
 <H3>Result:</H3>
 Thus ,the program to perform the Parts of Speech identification and Synonymis executed sucessfully.
