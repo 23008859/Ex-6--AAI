@@ -50,9 +50,12 @@ print ( "Antonyms : " ,set(antonyms))
 ```
 <H3>Output</H3>
 Parts of Speech:
-![380434867-1d6792e5-2b04-4cff-a1f5-d4ab1ed18034](https://github.com/user-attachments/assets/1d4685b2-bd7e-4b07-91f1-f09a65b23814)
+     
+![380434867-1d6792e5-2b04-4cff-a1f5-d4ab1ed18034](https://github.com/user-attachments/assets/01a99407-bd5f-4c34-9326-cd49123805a7)
+
 
 Synonyms and Antonyms:
+
 ![380434878-7e1b48d8-6b27-429b-9b21-caa9bd6066df](https://github.com/user-attachments/assets/3ca1e062-c924-4961-9904-521b73b23452)
 
 <H3>Result:</H3>
